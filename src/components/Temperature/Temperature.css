@@ -1,0 +1,51 @@
+.Temperature {
+    color: var(--c2);
+    fill: var(--c2);
+    clip-path: stroke-box;
+    font-family: Inter;
+    position: absolute;
+    font-weight: 900;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left;
+    user-select: none;
+    transform: scale(var(--tempScale));
+}
+
+.temp {
+    font-size: min(50vh, 35vw);
+    display: inline-block;
+    margin-bottom: -0.255em;
+    margin-left: -0.05em;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity var(--animationLong);
+}
+
+.temp:empty {
+    opacity: 0;
+}
+
+.condition {
+    overflow: hidden;
+    display: inline-block;
+    font-size: calc(min(50vh, 35vw) * 0.05);
+    margin-left: -9.59em;
+    margin-bottom: -0.255em;
+}
+
+.condition svg {
+    height: 20.1em;
+    width: 10em;
+    letter-spacing: 0.007em;
+}
+
+#conditionString {
+    opacity: 1;
+    transition: opacity var(--animationLong);
+}
+
+#conditionString:empty {
+    opacity: 0;
+}

@@ -1,0 +1,9 @@
+.Links {
+    transform-origin: top right;
+    transform: scale(var(--uiScale));
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: calc(2*var(--s1));
+    margin-top: calc(2*var(--s1));
+}

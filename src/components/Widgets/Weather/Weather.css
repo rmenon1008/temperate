@@ -1,0 +1,25 @@
+.weather-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.weather-item {
+    padding: var(--s2);
+    text-align: center;
+}
+
+.weather-item-icon {
+    font-weight: 700;
+    color: var(--c1);
+    margin-top: var(--s1);
+}
+
+.weather-item-label {
+    font-size: 0.8em;
+}
+
+.weather-item-text {
+    margin-top: var(--s1);
+    font-size: 0.8em;
+}

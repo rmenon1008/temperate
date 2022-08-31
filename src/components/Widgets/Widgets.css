@@ -1,0 +1,8 @@
+.Widgets {
+    transform-origin: top right;
+    transform: scale(var(--uiScale));
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: calc(2*var(--s1));
+}

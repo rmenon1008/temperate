@@ -1,0 +1,51 @@
+.centered-narrow {
+  max-width: 500px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 15px;
+  /* margin-bottom: 20px; */
+}
+
+.link-remove {
+  width: 7%;
+  display: flex;
+  align-items: center;
+  color: orangered;
+}
+
+.link-remove svg {
+  height: 1.7em;
+}
+
+.link-add {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--brand-green-dark);
+}
+
+.link-add button {
+  width: 100%;
+  background-color: white;
+  border-radius: 7px;
+  padding: 6px 14px;
+  margin-top: 5px;
+}
+
+.link-add svg {
+  height: 1.7em;
+  vertical-align: -0.48em;
+}

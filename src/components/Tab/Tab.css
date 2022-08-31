@@ -1,0 +1,50 @@
+.Tab {
+    color: var(--c1);
+    position: relative;
+    font-size: 16px;
+}
+
+.tab-indicator {
+    background-color: var(--c3a);
+    font-size: 1rem;
+    backdrop-filter: blur(var(--blur));
+    width: 40px;
+    height: 50px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-bottom: var(--s1);
+    display: flex;
+    align-items: center;
+    padding-left: 11px;
+    box-sizing: border-box;
+
+    transition: background-color var(--animationShort);
+}
+
+.tab-drawer {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+
+.tab-drawer-inner {
+    margin-right: 52px;
+    width: 320px;
+    min-height: 50px;
+    border-radius: var(--s1);
+    background-color: var(--c3a);
+    overflow: hidden;
+    backdrop-filter: blur(var(--blur));
+    transition: opacity var(--animationShort);
+}
+
+.tab-content {
+    padding: var(--s2);
+}
+
+.tab-title-bar {
+    background-color: var(--c3a);
+    padding: var(--s2) var(--s1);
+    font-weight: 700;
+}

@@ -1,0 +1,11 @@
+.Attribution {
+    transform-origin: bottom right;
+    transform: scale(var(--uiScale));
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: var(--s1);
+    margin-bottom: calc(2*var(--s1));
+
+    transition: opacity var(--animationShort);
+}

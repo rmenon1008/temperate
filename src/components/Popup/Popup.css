@@ -1,0 +1,101 @@
+
+.popup {
+    width: 250px;
+    /* height: 100%; */
+    padding: 7px;
+}
+
+.popup-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.popup-content-card{
+    width: 100%;
+    padding: 10px 13px;
+    border-radius: 7px;
+    border: var(--brand-green) 3px solid;
+    margin: 3px;
+    color: black;
+    font-size: 13px;
+}
+
+.popup-content-card span.heading {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--brand-green);
+}
+
+.popup-content-card span.heading svg {
+    float: right;
+    height: 1.6em;
+    margin: -0.20em;
+}
+
+.popup-content-card ul {
+    padding-inline-start: 1.5em;
+    margin-block-start: -0.5em;
+    margin-block-end: 0;
+}
+
+.popup-content-card li {
+    margin-bottom: 0.5em;
+}
+
+.logo-container {
+    margin-bottom: 14px;
+}
+
+.popup-button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 13px;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: #e3e3e3;
+    color: black;
+    transition: background-color 0.15s;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.popup-button.dark {
+    background-color: #323232;
+    color: white;
+}
+
+.popup-button:hover {
+    background-color: #d0d0d0;
+}
+
+.popup-button.dark:hover {
+    background-color: #484848;
+}
+
+.popup-button svg {
+    float: right;
+    height: 1.6em;
+    margin: -0.20em;
+}
+
+.popup-button svg path {
+    stroke-width: 1.5 !important;
+}
+
+.popup-card-close {
+    width: 100%;
+    background-color: transparent;
+    margin-top: 7px;
+    margin-bottom: -5px;
+}
+
+.popup-card-close svg {
+    height: 1.3em;
+    margin: -0.15em;
+    vertical-align: -0.14em;
+}

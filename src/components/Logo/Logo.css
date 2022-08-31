@@ -1,0 +1,9 @@
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.logo-green {
+    color: var(--brand-green);
+    font-weight: 900;
+}
