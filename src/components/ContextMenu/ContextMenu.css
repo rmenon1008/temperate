@@ -1,7 +1,7 @@
 .context-menu {
     transform-origin: top left;
     transform: scale(var(--uiScale));
-    width: 175px;
+    width: 185px;
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -18,7 +18,7 @@
 .context-menu-item {
     width: 100%;
     color: var(--c1);
-    font-size: 13px;
+    font-size: 14px;
     padding: 5px 7px;
     border-radius: 4px;
     cursor: pointer;

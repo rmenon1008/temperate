@@ -40,12 +40,10 @@ const ContextMenu = () => {
     const contextMenuRef = useRef(null);
 
     const handleClick = useCallback((e) => {
-        console.log("click", e.target);
         setShow(false);
     }, []);
 
     const handleContextMenu = (event) => {
-        console.log("show", show);
         setShow((prev) => {
             if (!prev) {
                 event.preventDefault();
@@ -65,7 +63,6 @@ const ContextMenu = () => {
     }
 
     const visibilityChange = useCallback(() => {
-        console.log("visibilityChange", show);
         setShow(false);
     }, []);
 
