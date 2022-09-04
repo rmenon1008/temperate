@@ -20,19 +20,25 @@
     top: 0;
     left: 0;
     object-fit: cover;
-    opacity: 0;
-    transform: scale(1.015);
-    transition-timing-function: cubic-bezier(0.150, 0.845, 0.085, 1.005);
-    transition: opacity var(--animationLong), transform var(--animationLong);
+    transform: scale(1);
+    opacity: 1;
+    /* transition-timing-function: cubic-bezier(0.150, 0.845, 0.085, 1.005); */
+    /* transition: opacity var(--animationLong), transform var(--animationLong); */
+    animation: fadeIn var(--animationLong);
+    /* animation-timing-function: cubic-bezier(0.420, 0.000, 0.155, 1.005);; */
 }
 
-/* @keyframes fadeIn {
+.Background img.unloaded {
+    animation-play-state: paused;
+}
+
+@keyframes fadeIn {
     from {
-        transform: scale(0.96);
+        transform: scale(1.017);
         opacity: 0;
     }
     to {
         transform: scale(1);
         opacity: 1;
     }
-} */
+}
