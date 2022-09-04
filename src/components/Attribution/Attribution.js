@@ -8,7 +8,7 @@ const Attribution = (props) => {
             <a className="link" href={props.link}>
                 {props.name} on Unsplash
             </a>
-            <span className="link icon" onClick={props.swapImage}><Refresh size="1.2em" style={{ marginTop: '-.2em' }} /></span>
+            <span className="link icon" onClick={props.swapImage}><Refresh size="1.2em" style={{ marginTop: '-.2em', cursor: 'pointer' }} /></span>
         </div>
     );
 }
