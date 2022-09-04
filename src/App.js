@@ -1,5 +1,6 @@
 import './App.css';
 import Background from './components/Background/Background';
+import Alerts from './components/Alerts/Alerts';
 import Temperature from './components/Temperature/Temperature';
 import { UserStorage } from './components/UserStorage/UserStorage';
 import Links from './components/Links/Links';
@@ -36,6 +37,7 @@ function App() {
     <div className="App App-newtab">
       <UserStorage>
         <Background />
+        <Alerts />
         <Temperature />
         {/* <Widgets /> */}
         <Links />
