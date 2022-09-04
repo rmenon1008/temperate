@@ -6,9 +6,10 @@ const UserStorageContext = createContext();
 const defaultOptions = {
     global: {
         use24h: false,
-        useGeolocation: true,
         locationOverride: "",
+        usePreciseLocation: null,
         uiScale: 1,
+        newUpdate: true,
     },
     colors: {
         autoColor: true,
@@ -20,6 +21,7 @@ const defaultOptions = {
     background: {
         autoImage: true,
         imgSource: "mountains",
+        justSwapped: false,
         imgOffset: 0,
         imgUrl: "",
     },
@@ -29,6 +31,12 @@ const defaultOptions = {
         displayCond: true,
         useFeelsLike: false,
         tempScale: 1,
+    },
+    graph: {
+        display: true,
+        maxHours: 16,
+        displayTemp: true,
+        displayPercip: true,
     },
     links: [],
 }
@@ -57,7 +65,6 @@ const UserStorage = (props) => {
             if (result.temperateOptions) {
                 // set our copy of user storage to the chrome storage
                 // no need to update it as it's already up to date
-                console.log("Found existing user storage", result.temperateOptions);
                 _setUserStorage(result.temperateOptions);
             } else {
                 console.log("No user storage found, replacing with default");
@@ -66,15 +73,13 @@ const UserStorage = (props) => {
                     console.log("Migration failed, using default");
                     setUserStorage(defaultOptions);
                 }
-                
+
             }
         });
 
         window.chrome.storage.onChanged.addListener((changes, area) => {
-            if (userStorage) {
-                if (area === 'sync' && changes.temperateOptions) {
-                    _setUserStorage(changes.temperateOptions.newValue);
-                }
+            if (changes.temperateOptions) {
+                _setUserStorage(changes.temperateOptions.newValue);
             }
         });
     }, []);
