@@ -62,9 +62,8 @@ const SwitchField = (props) => {
   const formik = useFormikContext();
   const handleChange = (e) => {
     formik.handleChange(e);
-    if (props.onChange) {
-      console.log('switch change', e);
-      props.onChange(e);
+    if (props.onSwitch) {
+      props.onSwitch(e.target.checked);
     }
   }
   return (
@@ -107,12 +106,12 @@ const SliderField = (props) => {
     setValue(e.target.value);
     formik.handleChange(e);
   }
-
+  const formattedVal = props.float ? parseFloat(value).toFixed(1) : value;
   return (
     <div className='input input-slider'>
       <label htmlFor={props.name} disabled={props.disabled}>
         <div className='label'>{props.label}</div>
-        <div className='value'>{parseFloat(value).toFixed(1)}</div>
+        <div className='value'>{value}</div>
         <div className='detail'>{props.detail}</div>
       </label>
       <Field
@@ -134,7 +133,6 @@ const BackgroundPicker = (props) => {
 
   useEffect(() => {
     fetch(BG_OPTIONS_API).then(res => res.json()).then(data => {
-      console.log(data);
       setOptions(data);
     }).catch(err => {
       setDisabled(true);
@@ -150,10 +148,8 @@ const BackgroundPicker = (props) => {
 
   useEffect(() => {
     if (options && options[index]) {
-      console.log("Making image invisible");
       imagePreviewRef.current.style.opacity = 0;
       imagePreviewRef.current.addEventListener('load', () => {
-        console.log("Making image visible");
         imagePreviewRef.current.style.opacity = 1;
       });
     }
