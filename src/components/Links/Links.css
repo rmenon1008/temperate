@@ -7,3 +7,66 @@
     margin-right: calc(2*var(--s1));
     margin-top: calc(2*var(--s1));
 }
+
+.nested-group {
+    display: inline-block;
+    position: relative;
+}
+
+.nested-links-contain {
+    position: absolute;
+    right: 12px;
+    padding-top: 5px;
+    pointer-events: none;
+}
+
+.nested-links {
+    opacity: 0;
+    background-color: var(--c3a);
+    backdrop-filter: blur(var(--blur));
+    border-radius: 7px;
+    overflow: hidden;
+    padding: 3px;
+    gap: 3px;
+    flex-direction: column;
+    display: flex;
+    transition: opacity var(--animationShort);
+    width: max-content;
+}
+
+.nested-link {
+    border-radius: 4px;
+    display: inline-block;
+    width: 100%;
+    color: var(--c1);
+    font-size: 14px;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: transparent;
+    transition: background-color var(--animationShort);
+}
+
+.nested-links:empty {
+    display: none;
+}
+
+.nested-link:hover {
+    background-color: var(--c3a);
+}
+
+.link.category svg {
+    height: 1.2em;
+    margin: -0.2em
+}
+
+.nested-group:hover .nested-links-contain {
+    pointer-events: all;
+}
+
+.nested-group:hover .nested-links {
+    opacity: 1;
+}
+
+.nested-group:hover .link.category {
+    background-color: var(--c3a2);
+}

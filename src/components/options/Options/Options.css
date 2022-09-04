@@ -19,6 +19,25 @@ h2 {
   /* margin-bottom: 20px; */
 }
 
+.link-group {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 15px
+}
+
+.link-group.nested::before {
+  content: "";
+  display: block;
+  width: 30%;
+}
+
+.link-group.nested,
+.link-group.category {
+  margin-bottom: 5px;
+}
+
 .link-remove {
   width: 7%;
   display: flex;
@@ -31,10 +50,25 @@ h2 {
 }
 
 .link-add {
+  margin-bottom: 5px;
   width: 100%;
   display: flex;
   align-items: center;
   color: var(--brand-green-dark);
+}
+
+.link-add.nested {
+  margin-bottom: 15px;
+}
+
+.link-add.nested button {
+  width: 200%;
+}
+
+.link-add.nested::before {
+  content: "";
+  display: block;
+  width: 30%;
 }
 
 .link-add button {
@@ -48,4 +82,19 @@ h2 {
 .link-add svg {
   height: 1.7em;
   vertical-align: -0.48em;
+}
+
+.card.delete-all {
+  margin-bottom: 60px;
+  font-size: 17px;
+  background-color: transparent;
+  border: 2px solid orangered;
+  color: orangered;
+  padding: 12px;
+  transition: background-color var(--animationShort), color var(--animationShort);
+}
+
+.card.delete-all:hover {
+  background-color: orangered;
+  color: white;
 }
