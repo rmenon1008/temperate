@@ -1,0 +1,64 @@
+
+.Alerts {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.alert-card {
+    line-height: 1.3;
+    width: 590px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    font-size: 15px;
+    background-color: var(--c3a);
+    backdrop-filter: blur(var(--blur));
+    /* opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--animationShort), backdrop-filter var(--animationShort);
+    z-index: 99; */
+}
+
+.alert-card p {
+    font-weight: 400;
+    color: var(--c1);
+    margin: 0;
+    padding: 12px;
+    flex-grow: 1;
+}
+
+.alert-card a {
+    color: var(--c1);
+}
+
+.alert-card h1 {
+    margin: 0;
+}
+
+.alert-card ul {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    padding-inline-start: 20px;
+}
+
+.alert-card .smaller {
+    font-size: 13px;
+}
+
+.alert-card button {
+    min-width: 130px;
+    background-color: transparent;
+    padding: 20px;
+    font-size: 15px;
+    border-left: 2px solid var(--c1);
+    color: var(--c1);
+    transition: background-color var(--animationShort);
+}
+
+.alert-card button:hover {
+    background-color: var(--c3a2);
+}
